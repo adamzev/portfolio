@@ -1,41 +1,52 @@
-{% load cms_tags menu_tags sekizai_tags %}
-<!doctype html>
+{% load staticfiles cms_tags menu_tags sekizai_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
 <html>
     <head>
-        <title>{% block title %}This is my new project home page{% endblock title %}</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <style type="text/css">
-            .nav {
-                padding-left: 0;
-            }
-            .nav li {
-                display: inline;
-                list-style-type: none;
-                padding-right: 20px;
-            }
-            .container {
-                width: 940px;
-                margin: 0 auto
-            }
-            .content {
-                float: left;
-                width: 80%;
-            }
-            .sidebar {
-                float: left;
-                width: 20%;
-            }
-        </style>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!-- Title  -->
+        <title>{% block title %}Adam Levin's Portfolio{% endblock title %}</title>
+
+        <!-- Favicon  -->
+        <link rel="shortcut icon" href="img/core-img/favicon.ico">
+
+        <!-- Core Style CSS -->
+        <link rel="stylesheet" href="{% static 'css/core-style.css' %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+
+        <!-- Responsive css -->
+        <link href="css/responsive/responsive.css" rel="stylesheet">
+
+        <!-- Switch Fonts -->
+        <link href="css/fonts/opensans.css" rel="stylesheet">
+
         {% render_block "css" %}
     </head>
     <body>
         {% cms_toolbar %}
-        <div class="container">
+        <div class="">
             <ul class="nav">
                 {% show_menu 0 100 100 100 %}
             </ul>
             {% block content %}{% endblock content %}
         </div>
+
+        <!-- jQuery (necessary for all JavaScript plugins) -->
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <!-- Popper js -->
+        <script src="js/bootstrap/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!-- Plugins js -->
+        <script src="js/include-all-plugins.js"></script>
+        <!-- Active js -->
+        <script src="js/active.js"></script>
         {% render_block "js" %}
     </body>
 </html>

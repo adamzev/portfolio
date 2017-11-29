@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+    <!-- Footer Area Start -->
+    <div class="footer_area">
+        <!-- Top Footer Area Start -->
+        <div class="foo_top_header_one section_padding_100_70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single_foo_part">
+                            {% placeholder "bio" %}
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="single_foo_part m-top-50">
+                            <h5>Projects</h5>
+                            <ul class="imp_links">
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Tutor Delphia's Website</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Levin & Associates' Website</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>A CRM and Lesson Tracker for Tutoring Companies</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>A Rocket Simulation</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>A Baseball Simulation</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Data Explorations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3  m-top-50">
+                        <div class="single_foo_part">
+                            <h5>Study Notes</h5>
+                            <p>As I learn new skills, I share out notes regarding what I'm currently studying.</p>
+                            <div class="foo_single_blog_area">
+                                <p class="foo_blog_date">Data Science</p>
+                                <p class="foo_blog_date">Python</p>
+                                <p class="foo_blog_date">Algorithms</p>
+                                <p class="foo_blog_date">Ubuntu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3  m-top-50">
+                        <div class="single_foo_part">
+                            <h5>Contact Info</h5>
+                            <div class="foo_single_contact_info">
+                                <p>Phone:</p>
+                                <p>215-307-6233</p>
+                            </div>
+                            <div class="foo_single_contact_info">
+                                <p>Email:</p>
+                                <p>Adam@TutorDelphia.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom Area Start -->
+        <div class="foo_bottom_header_one section_padding_50 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        {% placeholder "content" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+	
+{% endblock content %}
