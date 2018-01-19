@@ -21,10 +21,10 @@
         <link rel="stylesheet" href="{% static 'style.css' %}">
 
         <!-- Responsive css -->
-        <link href="css/responsive/responsive.css" rel="stylesheet">
+        <link href="{% static 'css/responsive/responsive.css' %}" rel="stylesheet">
 
         <!-- Switch Fonts -->
-        <link href="css/fonts/opensans.css" rel="stylesheet">
+        <link href="{% static 'css/fonts/opensans.css' %}" rel="stylesheet">
 
         {% render_block "css" %}
     </head>
@@ -38,15 +38,15 @@
         </div>
 
         <!-- jQuery (necessary for all JavaScript plugins) -->
-        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
         <!-- Popper js -->
-        <script src="js/bootstrap/popper.min.js"></script>
+        <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
         <!-- Bootstrap js -->
-        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
         <!-- Plugins js -->
-        <script src="js/include-all-plugins.js"></script>
+        <script src="{% static 'js/include-all-plugins.js' %}"></script>
         <!-- Active js -->
-        <script src="js/active.js"></script>
+        <script src="{% static 'js/active.js' %}"></script>
         {% render_block "js" %}
     </body>
 </html>
