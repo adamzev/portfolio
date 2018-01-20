@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+	
+    <!-- >>>>>>>>>>>>>>>> Message Now Area Start <<<<<<<<<<<<<<<< -->
+    <section class="message_now_area section_padding_100_70" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <!-- Message Title -->
+                    <div class="message_title">
+                        <!-- Section Heading Start -->
+                        <div class="section_heading">
+                            <h3 class="mb-3">Addition Form</h3>
+                            <p>Generate a randomized set of addition problems as a pdf worksheet.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact_from">
+                        <form id="main_contact_form">
+                            <!-- Message Input Area Start -->
+                            <div class="contact_input_area">
+                                <div id="success_fail_info"></div>
+                                <div class="row justify-content-md-center">
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="min_val">Enter the number of problems for the worksheet (between 4 and 30 is recommened)</label>
+                                            <input type="number" class="form-control" name="problem_count" id="problem_count" placeholder="Number of problems" required>
+                                        </div>
+        
+                                        <div class="form-group">
+                                            <label for="min_val">Enter the minimum value to use on the worksheet (negative numbers are allowed)</label>
+                                            <input type="number" class="form-control" name="min_val" id="min_val" placeholder="Minimum Value" required>
+                                        </div>
+                                    <!-- Single Input Area Start -->
+                                        <div class="form-group">
+                                            <label for="max_val">Enter the maximum value to use on the worksheet</label>
+                                            <input type="number" class="form-control" name="max_val" id="max_val" placeholder="Maximum Value" required>
+                                        </div>
+                                    <!-- Single Input Area Start -->
+
+                                        <div class="form-group">
+                                            <label class="custom-control custom-checkbox">
+                                                <input type="checkbox" name="qr" id="qr" class="custom-control-input">
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Include a QR encoded answer key.</span>
+                                            </label>
+                                        </div>
+                                        <button type="submit" id="create-form" class="btn btn-success btn-pill">Create the Form</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Message Input Area End -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Message Now Area Start <<<<<<<<<<<<<<<< -->
+
+{% endblock content %}
+{% block js_scripts %}
+    <script>
+        $('#create-form').click( event => {
+            event.preventDefault();
+            let problem_count = $('#problem_count').val();
+            let min_val = $('#min_val').val();
+            let max_val = $('#max_val').val();
+            let qr = $('#qr').val()
+            data = {
+                qr : qr,
+                problem_count : problem_count,
+                min_val : min_val,
+                max_val : max_val
+            }
+            console.log("Prob Count: " + problem_count + " min_val: " + min_val + " max_val: " + max_val + "")
+            /*.ajax({
+                type: "POST",
+                url: '',
+                data: data,
+                success: success,
+                dataType: dataType
+            });*/
+        });
+        
+    </script>
+
+{% endblock js_scripts %}
