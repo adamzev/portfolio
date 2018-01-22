@@ -20,7 +20,8 @@
                     </div>
 
                     <div class="contact_from">
-                        <form id="main_contact_form">
+                        <form id="main_contact_form" method="POST" action="/grade-it/add-two/">
+                            {% csrf_token %}
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div id="success_fail_info"></div>
@@ -67,7 +68,7 @@
 {% block js_scripts %}
     <script>
         $('#create-form').click( event => {
-            event.preventDefault();
+            //event.preventDefault();
             let problem_count = $('#problem_count').val();
             let min_val = $('#min_val').val();
             let max_val = $('#max_val').val();

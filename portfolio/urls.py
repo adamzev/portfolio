@@ -9,12 +9,15 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
+from . import views
 
 admin.autodiscover()
 
 urlpatterns = [
     url(r'^sitemap\.xml$', sitemap,
         {'sitemaps': {'cmspages': CMSSitemap}}),
+     url(r'^grade-it/$', views.home, name='home'),
+     url(r'^grade-it/add-two/$', views.addTwo, name='addTwo'),
 ]
 
 urlpatterns += i18n_patterns(
