@@ -74,9 +74,9 @@ LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'US/Eastern'
 
-USE_I18N = True
+USE_I18N = False
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = True
 
@@ -193,9 +193,11 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
+    ('home.html', 'Home'),
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('sidebar_right.html', 'Sidebar Right'),
+    ('worksheet_form.html', 'Worksheet Form'),
 )
 
 CMS_PERMISSION = True

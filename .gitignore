@@ -42,3 +42,4 @@ static/
 portenv/
 .vscode/
 portfolio/__pycache__/
+portfolio/static/sheets/
