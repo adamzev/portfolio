@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+}
+
+p {
+    color: #111;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+ol,
+li,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    transition-duration: 500ms;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.section_padding_100 {
+    padding: 100px 0;
+}
+
+.section_padding_100_0 {
+    padding: 100px 0 0 0;
+}
+
+.section_padding_200 {
+    padding: 200px 0;
+}
+
+.section_padding_100_70 {
+    padding: 100px 0 70px 0;
+}
+
+.header_area {
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #ddd;
+    height: 70px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+#doc-nav > li {
+    display: inline-block;
+}
+
+.menu-area ul {
+    text-align: right;
+}
+
+.files-area ul li ul li {
+    margin-left: 30px;
+}
+
+#doc-nav a {
+    display: block;
+    height: 70px;
+    padding: 23px 10px;
+    text-transform: capitalize;
+}
+
+#doc-nav a:hover {
+    color: #27ae60;
+}
+
+.bg-gray {
+    background-color: #f6f6f6;
+}
+
+.logo-area > a {
+    border: 2px solid #000;
+    display: inline-block;
+    font-weight: 600;
+    margin: 15px 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.logo-area > a:hover {
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+.introduction-area h6 {
+    padding: 5px;
+}
+
+.single_part > img {
+    border: 2px solid #ddd;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.introduction-area {
+    padding: 170px 0 0 !important;
+}
+
+.support_area {
+    background-color: #27ae60;
+    padding: 30px 15px;
+    position: relative;
+    text-align: center;
+    top: 170px;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.support_area h4 {
+    color: #fff;
+}
+
+.support_area i {
+    color: #fff;
+    display: block;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.support_area > a {
+    background-color: #fff;
+    border-radius: 5px;
+    display: block;
+    padding: 5px 15px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    #doc-nav a {
+        font-size: 12px;
+        padding: 26px 4px;
+    }
+    .support_area {
+        margin-bottom: 100px;
+        padding: 30px 15px;
+        top: 0;
+    }
+    #intro > h3 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #doc-nav a {
+        font-size: 16px;
+        padding: 23px 5px;
+    }
+}
