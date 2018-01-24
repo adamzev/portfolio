@@ -1,21 +1,200 @@
-    /* ---------------------------------------------
-    :: Template Name: Classy - Multipurpose Template
-    :: Author: Designing World
-    :: Author URL: https://wrapbootstrap.com/user/DesigningWorld
-    :: Description: Classy is a complete multi-functional template. It's creative and clean design. It's has huge collection of templates for Business, Agency,        Startup, App Landing, Product Landing, Service Landing, Hosting & Technology, Restaurant, Freelancer, Resume & CV, Portfolios, Education, Spa & Beauty,        Photography, Fitness & Gym.
-    :: Version: 2.1.0
-    :: Last Update: 11-05-2017
-    :: portfolio/style
-    --------------------------------------------- */
-    
-    * {
-        margin: 0;
-        padding: 0;
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  *, *::after, *::before {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .pen-title {
+    color: #FFFFFF;
+    margin-bottom: 0;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+  }
+  
+  .pen-description {
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-shadow: 1px 1px 0 #000;
+  }
+  .pen-description a {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .wrap {
+    max-width: 85.375rem;
+    margin: 0 auto;
+  }
+  
+  .image-as-background {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .screen-reader-text, .owl-controls .owl-buttons span {
+    height: auto;
+    width: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+  }
+  .screen-reader-text:hover, .owl-controls .owl-buttons span:hover, .screen-reader-text:active, .owl-controls .owl-buttons span:active, .screen-reader-text:focus, .owl-controls .owl-buttons span:focus {
+    height: auto;
+    width: auto;
+    background-color: #000000;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #FFFFFF;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    left: 0.3125rem;
+    line-height: normal;
+    padding: 0.9375rem 1.4375rem 0.875rem;
+    text-decoration: none;
+    top: 0.3125rem;
+    z-index: 100000;
+  }
+  
+  .wrap {
+    max-width: 50rem;
+    text-align: center;
+  }
+  
+  .owl-theme {
+    color: #FFFFFF;
+  }
+  .owl-theme figure {
+    line-height: 0;
+    margin: 0;
+    position: relative;
+  }
+  .owl-theme figcaption {
+    background: black;
+    font-size: 0.875rem;
+    line-height: 1.33;
+    padding: 0.625rem 1.25rem;
+    text-align: left;
+    z-index: 10;
+  }
+  @media screen and (min-width: 40rem) {
+    .owl-theme figcaption {
+      background: rgba(0, 0, 0, 0.8);
+      bottom: 0;
+      font-size: 1rem;
+      left: 0;
+      padding: 1.25rem 2.5rem;
+      right: 0;
+      position: absolute;
     }
+  }
+  
+  .owl-controls {
+    margin-top: 0.625rem;
+    text-align: center;
+  }
+  .owl-controls .owl-buttons div {
+    position: absolute;
+    top: 50%;
+    background: #21759b;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-top: -0.75rem;
+    opacity: 0.8;
+    padding: 0.1875rem 0.625rem;
+    zoom: 1;
+  }
+  .owl-controls .owl-buttons div:after {
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    content: '';
+    display: inline-block;
+  }
+  .owl-controls .owl-buttons .owl-prev {
+    left: 0;
+  }
+  .owl-controls .owl-buttons .owl-prev:after {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/476573/keyboard_arrow_left.svg") center center no-repeat;
+  }
+  .owl-controls .owl-buttons .owl-next {
+    right: 0;
+  }
+  .owl-controls .owl-buttons .owl-next:after {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/476573/keyboard_arrow_right.svg") center center no-repeat;
+  }
+  .owl-controls .owl-page {
+    display: inline-block;
+    *display: inline;
+    /*IE7 life-saver */
+    zoom: 1;
+  }
+  .owl-controls .owl-page span {
+    height: 0.75rem;
+    width: 0.75rem;
+    background: #21759b;
+    border-radius: 50%;
+    display: block;
+    filter: Alpha(Opacity=70);
+    /*IE7 fix*/
+    margin: 0.3125rem 0.4375rem;
+    opacity: 0.7;
+  }
+  .owl-controls .owl-page span.owl-numbers {
+    height: auto;
+    width: auto;
+    border-radius: 1.875rem;
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    padding: 0.125rem 0.625rem;
+  }
+  .owl-controls .owl-page.active span {
+    filter: Alpha(Opacity=100);
+    /*IE7 fix*/
+    opacity: 1;
+  }
+  .owl-controls.clickable .owl-buttons div:hover {
+    filter: Alpha(Opacity=100);
+    /*IE7 fix*/
+    opacity: 1;
+    text-decoration: none;
+  }
+  .owl-controls.clickable .owl-page:hover span {
+    filter: Alpha(Opacity=100);
+    /*IE7 fix*/
+    opacity: 1;
+  }
+  
+  .owl-item.loading {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/476573/AjaxLoader.gif) no-repeat center center;
+    min-height: 9.375rem;
+  }
+  
+  
+    /* :: 4.0 Header Area CSS */
 
-    /* -----------------------------------------
-        :: Place your custom css code here ::
-    ----------------------------------------- */
-    .contact_input_area .form-group input, .form-group span.custom-control-indicator {
-        border: 1px solid #3498db;
-    }

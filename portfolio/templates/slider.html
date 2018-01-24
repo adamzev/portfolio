@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% load staticfiles cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/476573/owl.carousel.css">
+<style>
+    .flex_ul {
+        display: flex;
+    }
+    .flex_ul li {
+        padding: 20px;
+    }
+</style>
+<!DOCTYPE html>
+    <!-- >>>>>>>>>>>>>>>> Single Portfolio Details Area Start <<<<<<<<<<<<<<<< -->
+    <section class="single_portfolio_details_area section_padding_100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-12">
+                    <div>
+                        <h2>Tutor Delphia's Management (TDM) System</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-5">
+                    <!--  Gallery Details Info -->
+                    <div class="single_gallery_item_info m-md-top-30 m-xs-top-30">
+                        <!-- Headline -->
+                        <!--  Description -->
+                        <div class="description">
+                            <h6><i class="fa fa-user"></i> By Adam Levin.</h6><p>Contributions by Justin Kantor. Consulting by Tristan Mills and Jared McGuire.</p>
+                            <h5>Project Overview</h5>
+                            <p>The TDM is used for managing tutors, tracking lessons, updating content (on www.tutordelphia.com) tracking leads and clients.</p>
+                            <p>By using the TDM we were able to automate processes such as managing tutor payments, assigning clients to tutors and tracking lessons.</p>
+                            <h5>Toolset</h5>
+                            <ul class="flex_ul">
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                                <li>HTML, CSS and JavaScript</li>
+                                <li>JQuery</li>
+                                <li>Slim Framework</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <!--  Gallery Slider -->
+
+                    <div class="owl-carousel owl-theme">
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/TutorSearch.png' %}" alt="TutorSearch">
+                                <figcaption>Tutors can be filtered by subject and distance to a zip code.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                            <img src="{% static 'img/TDM/Cal.png' %}" alt="Calendar">
+                            <figcaption>A lesson calendar allows for easy viewing and entry of lessons.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/Client.png' %}" alt="Client">
+                                <figcaption>Client and student information is tracked in a secure manner.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/Invoice.png' %}" alt="Invoice">
+                                <figcaption>Invoices and tutor payments are managed through the system. Before this was automated, this was a time-intensive administrative task.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/Map.png' %}" alt="Map">
+                                <figcaption>Tutor's coverage areas are easily visualized on a map.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/MapBySubject.png' %}" alt="MapBySubject">
+                                <figcaption>Tutor's coverage areas can be filtered by subject allowing us to figure out when we don't have a subject covered for a location. </figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/Phonelog.png' %}" alt="Phonelog">
+                                <figcaption>A phone log allows all client contacts to be tracked.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/Profile.png' %}" alt="Profile">
+                                <figcaption>Profiles that appear on TutorDelphia.com can be easily edited and approved.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/Reports.png' %}" alt="Reports">
+                                <figcaption>Monthly reports lets us track lead capture rates and other key stats.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/Subjects.png' %}" alt="Subjects">
+                                <figcaption>Subjects that appear on TutorDelphia.com can be modified here.</figcaption>
+                        </figure>
+                        <figure class="owl-item">
+                                <img src="{% static 'img/TDM/Todo.png' %}" alt="Todo">
+                                <figcaption>A todo list is integrated into the system (viewable by student or on this overall view).</figcaption>
+                        </figure>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row align-items-center">
+                    <div class="col-12 col-lg-12">
+                        <!--  Gallery Details Info -->
+                        <div class="single_gallery_item_info m-md-top-30 m-xs-top-30">
+                            <div class="description">
+                                <h6>Lessons Learned</h6>
+                                <p>When working on toy projects and going through tutorials, it is hard to see that much of the challenge of programming comes from managing complexity. I learned many lessons regarding that, from the importance of carefully chosen variable and database names to design patterns to simply creating reusable code and templates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+	
+{% endblock content %}
+{% block js_scripts %}
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/476573/owl.carousel.min.js"></script>
+
+<script>
+// Simple example of OwlCarousel.js
+window.OwlCarousel = {};
+( function( window, $, that ) {
+
+	// Constructor.
+	that.init = function() {
+		that.cache();
+
+		if ( that.meetsRequirements ) {
+			that.bindEvents();
+		}
+	};
+
+	// Cache all the things.
+	that.cache = function() {
+		that.$c = {
+			window: $( window ),
+			carousel: $( '.owl-carousel' ),
+		};
+	};
+
+	// Combine all events.
+	that.bindEvents = function() {
+		that.$c.window.on( 'load', that.owlCarousel_init );
+	};
+
+	// Do we meet the requirements?
+	that.meetsRequirements = function() {
+		return that.$c.carousel.length;
+	};
+
+	// Initialize Owl Carousel with options
+	// http://owlgraphic.com/owlcarousel/index.html#customizing
+	that.owlCarousel_init = function() {
+		that.$c.carousel.owlCarousel({
+			navigation : true, // Show next and prev buttons
+			navigationText: ['<span>Previous</span>', '<span>Next</span>'],
+			slideSpeed : 300,
+			paginationSpeed : 400,
+			singleItem:true
+		})
+	};
+
+	// Engage!
+	$( that.init );
+	
+})( window, jQuery, window.OwlCarousel );
+</script>
+{% endblock js_scripts %}
