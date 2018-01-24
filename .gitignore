@@ -38,7 +38,7 @@ Thumbs.db
 *.pyo
 *.pyc
 portfolio/settings.py
-static/
+/static/
 portenv/
 .vscode/
 portfolio/__pycache__/
