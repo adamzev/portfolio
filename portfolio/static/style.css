@@ -140,13 +140,13 @@ html {
     left: 0;
   }
   .owl-controls .owl-buttons .owl-prev:after {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/476573/keyboard_arrow_left.svg") center center no-repeat;
+    background: url("/static/img/keyboard_arrow_left.svg") center center no-repeat;
   }
   .owl-controls .owl-buttons .owl-next {
     right: 0;
   }
   .owl-controls .owl-buttons .owl-next:after {
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/476573/keyboard_arrow_right.svg") center center no-repeat;
+    background: url("/static/img/keyboard_arrow_right.svg") center center no-repeat;
   }
   .owl-controls .owl-page {
     display: inline-block;
@@ -191,7 +191,7 @@ html {
   }
   
   .owl-item.loading {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/476573/AjaxLoader.gif) no-repeat center center;
+    background: url("/static/imgAjaxLoader.gif") no-repeat center center;
     min-height: 9.375rem;
   }
   
