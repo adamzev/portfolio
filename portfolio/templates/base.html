@@ -18,25 +18,33 @@
 
         <!-- Core Style CSS -->
         <link rel="stylesheet" href="{% static 'css/core-style.css' %}">
-        <link rel="stylesheet" href="{% static 'style.css' %}">
+        
 
         <!-- Responsive css -->
         <link href="{% static 'css/responsive/responsive.css' %}" rel="stylesheet">
 
         <!-- Switch Fonts -->
         <link href="{% static 'css/fonts/opensans.css' %}" rel="stylesheet">
-
+        <link rel="stylesheet" href="{% static 'style.css' %}">
         {% render_block "css" %}
     </head>
     <body>
         {% cms_toolbar %}
-        <div class="">
-            <ul class="nav">
-                {% show_menu 0 100 100 100 %}
-            </ul>
-            {% block content %}{% endblock content %}
-        </div>
+        <header class="header_area">
+            <div class="main_header_area animated">
+                <div class="container">
+                    <nav id="navigation1" class="navigation navigation-landscape">
+                        <div class='nav-menus-wrapper'>
+                            <ul class="nav-menu">
+                                {% show_menu 0 100 100 100 %}
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
 
+        </header>
+        {% block content %}{% endblock content %}
         <!-- jQuery (necessary for all JavaScript plugins) -->
         <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
         <!-- Popper js -->
