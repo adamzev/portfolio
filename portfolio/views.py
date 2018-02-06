@@ -47,7 +47,7 @@ def createWorksheet(request):
         "min_val" : min_val,
         "max_val" : max_val,
         "qr" : qr,
-        "folder" : "portfolio/static/sheets"
+        "folder" : "static/sheets"
     }
     my_gen = WorksheetGen("add", "add", specs)
 
