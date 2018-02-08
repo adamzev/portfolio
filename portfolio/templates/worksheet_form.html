@@ -20,8 +20,9 @@
                     </div>
 
                     <div class="contact_from">
-                        <form id="main_contact_form" method="POST" action="/grade-it/worksheet/">
+                        <form id="main_contact_form" method="POST" action="/grade-it/">
                             {% csrf_token %}
+                            {{ form.non_field_errors }}
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div id="success_fail_info"></div>
@@ -29,24 +30,28 @@
                                     <!-- Single Input Area Start -->
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="min_val">Enter the number of problems for the worksheet (between 4 and 30 is recommened)</label>
-                                            <input type="number" class="form-control" name="problem_count" id="problem_count" placeholder="Number of problems" required>
+                                            {{ form.problem_count.errors }}
+                                            <label for="{{ form.problem_count.id_for_label }}">Enter the number of problems for the worksheet <p>(between 2 and 30)</p></label>
+                                            {{ form.problem_count }}
                                         </div>
         
                                         <div class="form-group">
-                                            <label for="min_val">Enter the minimum value to use on the worksheet (negative numbers are allowed)</label>
-                                            <input type="number" class="form-control" name="min_val" id="min_val" placeholder="Minimum Value" required>
+                                            {{ form.min_val.errors }}
+                                            <label for="{{ form.min_val.id_for_label }}">Enter the minimum value to use on the worksheet <p>(negative numbers are allowed)</p></label>
+                                            {{ form.min_val }}
                                         </div>
                                     <!-- Single Input Area Start -->
                                         <div class="form-group">
-                                            <label for="max_val">Enter the maximum value to use on the worksheet</label>
-                                            <input type="number" class="form-control" name="max_val" id="max_val" placeholder="Maximum Value" required>
+                                            {{ form.max_val.errors }}
+                                            <label for="{{ form.max_val.id_for_label }}">Enter the maximum value to use on the worksheet</label>
+                                            {{ form.max_val }}
                                         </div>
                                     <!-- Single Input Area Start -->
 
                                         <div class="form-group">
-                                            <label class="custom-control custom-checkbox">
-                                                <input type="checkbox" name="qr" id="qr" class="custom-control-input">
+                                            {{ form.qr.errors }}
+                                            <label for="{{ form.qr.id_for_label }}" class="custom-control custom-checkbox">
+                                                {{ form.qr }}
                                                 <span class="custom-control-indicator"></span>
                                                 <span class="custom-control-description">Include a QR encoded answer key.</span>
                                             </label>

@@ -28,12 +28,12 @@
         <link rel="stylesheet" href="{% static 'style.css' %}">
         {% render_block "css" %}
     </head>
-    <body>
+    <body class="grey_background">
         {% cms_toolbar %}
-        <header class="header_area">
+        <header class="header_area blue_background">
             <div class="main_header_area animated">
                 <div class="container">
-                    <nav id="navigation1" class="navigation navigation-landscape">
+                    <nav id="navigation1" class="navigation navigation-landscape blue_background">
                         <div class='nav-menus-wrapper'>
                             <ul class="nav-menu">
                                 {% show_menu 0 100 100 100 %}

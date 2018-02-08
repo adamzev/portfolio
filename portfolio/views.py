@@ -2,19 +2,51 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 import sys
 import os
+
+from .forms import WorksheetForm
+
 sys.path.append(os.path.abspath('../grade-it'))
 from worksheet_gen import WorksheetGen
 #from talk.models import Post
 #from talk.forms import PostForm
 
 
-def home(req):
-    tmpl_vars = {
-        'prob': "2 + 3",
-        'result': 5
+def worksheet_form(request):
+    if request.method == 'POST':
+        form = WorksheetForm(request.POST)
+
+        if form.is_valid():
+            min_val = form.cleaned_data['min_val']
+            max_val = form.cleaned_data['max_val']
+            problem_count = form.cleaned_data['problem_count']
+            qr = bool(form.cleaned_data.get('qr', False))
+
+            specs = {
+                "problem_type": "add",
+                "problem_count": problem_count,
+                "min_val" : min_val,
+                "max_val" : max_val,
+                "qr" : qr,
+                "folder" : "static/sheets"
+            }
+            my_gen = WorksheetGen("add", "add", specs)
+
+            sheet = my_gen.create_sheet()
+            sheet = sheet.replace("portfolio", "")
+            view_data = {
+                'result': sheet
+            }
+
+            return render(request, 'grade-it/worksheet.html', view_data)
+
+    else:
+        form = WorksheetForm()
+    
+    view_data = {
+        'form': form,
     }
 
-    return render(req, 'grade-it/index.html', tmpl_vars)
+    return render(request, 'worksheet_form.html', view_data)
 
 
 def addTwo(request):

@@ -197,4 +197,48 @@ html {
   
   
     /* :: 4.0 Header Area CSS */
+    .contact_input_area .form-group input {
+      border: 1px solid #27c54c;
+    }
 
+    .blue_background {
+      background: #5BC0EB;
+    }
+
+    .grey_background {
+      background: #d8d7d5;
+    }
+
+    .green_background, .custom-control-indicator {
+      background-color: #28a745;
+    }
+
+    .black_background {
+      background: #1a090d;
+    }
+    
+    .purple_background {
+      background: #4a314d;
+    }
+    
+    
+    .blue_text{
+      color: #5BC0EB;
+    }
+
+    .grey_text {
+      color: #7a7978;
+    }
+
+    .green_text {
+      color: #28a745;
+    }
+
+    .black_text, .imp_links {
+      color: #1a090d;
+    }
+    
+    .purple_text {
+      color: #4a314d;
+    }
+    

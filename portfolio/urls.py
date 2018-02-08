@@ -16,8 +16,8 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^sitemap\.xml$', sitemap,
         {'sitemaps': {'cmspages': CMSSitemap}}),
-     url(r'^grade-it/$', views.home, name='home'),
-     url(r'^grade-it/worksheet/$', views.createWorksheet, name='addTwo'),
+     url(r'^grade-it/$', views.worksheet_form, name='worksheet_form'),
+     url(r'^grade-it/worksheet/$', views.createWorksheet, name='create_worksheet'),
      url(r'^admin/', include(admin.site.urls), name='admin'),  # NOQA
     url(r'^', include('cms.urls')),
 ]
