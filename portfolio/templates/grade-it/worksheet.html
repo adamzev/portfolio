@@ -1,5 +1,27 @@
 {% extends "base.html" %}
-{% block content %}
-    <h2>Your worksheet is <a href="/{{result}}">here</a></h2>
+{% load cms_tags %}
 
-{% endblock %}
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+	
+    <!-- >>>>>>>>>>>>>>>> Message Now Area Start <<<<<<<<<<<<<<<< -->
+    <section class="message_now_area section_padding_30" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <!-- Message Title -->
+                    <div class="message_title m-bottom-15">
+                        <!-- Section Heading Start -->
+                        <div class="section_heading">
+                            <h3 class="mb-3">Grade-it Worksheet</h3>
+                            <p>Your worksheet has been generated! You can view it <a href="/{{result}}">here. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- >>>>>>>>>>>>>>>> Message Now Area Start <<<<<<<<<<<<<<<< -->
+
+{% endblock content %}

@@ -242,3 +242,18 @@ html {
       color: #4a314d;
     }
     
+    .message_title {
+      margin-bottom: 15px;
+    }
+
+    .section_heading {
+      margin-bottom: 15px;
+    }
+
+    .section_padding_30 {
+      padding: 30px 0 20px
+  }
+
+  .errorlist.nonfield {
+    color:#fff;background-color:#dc3545
+  }

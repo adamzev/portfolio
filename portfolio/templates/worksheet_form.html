@@ -6,12 +6,12 @@
 {% block content %}
 	
     <!-- >>>>>>>>>>>>>>>> Message Now Area Start <<<<<<<<<<<<<<<< -->
-    <section class="message_now_area section_padding_100_70" id="contact">
+    <section class="message_now_area section_padding_30" id="contact">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
                     <!-- Message Title -->
-                    <div class="message_title">
+                    <div class="message_title m-bottom-15">
                         <!-- Section Heading Start -->
                         <div class="section_heading">
                             <h3 class="mb-3">Addition Form</h3>
@@ -22,13 +22,14 @@
                     <div class="contact_from">
                         <form id="main_contact_form" method="POST" action="/grade-it/">
                             {% csrf_token %}
-                            {{ form.non_field_errors }}
+                            
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
-                                <div id="success_fail_info"></div>
+
                                 <div class="row justify-content-md-center">
                                     <!-- Single Input Area Start -->
                                     <div class="col-md-6 col-12">
+                                        <div id="success_fail_info">{{ form.non_field_errors }}</div>
                                         <div class="form-group">
                                             {{ form.problem_count.errors }}
                                             <label for="{{ form.problem_count.id_for_label }}">Enter the number of problems for the worksheet <p>(between 2 and 30)</p></label>
